@@ -1,7 +1,8 @@
 import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import Dashboard from './screens/dashboard';
+import { ROUTES } from './navigation/routes';
+import ChatScreen from './screens/chats';
 
 const Stack = createNativeStackNavigator();
 
@@ -10,9 +11,9 @@ const App = () => {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
-          name="Home"
-          component={Dashboard}
-          options={{title: 'Welcome'}}
+          name={ROUTES.CHAT_SCREEN}
+          component={ChatScreen}
+          options={{ title: 'Welcome' }}
         />
       </Stack.Navigator>
     </NavigationContainer>
