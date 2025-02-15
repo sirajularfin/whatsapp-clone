@@ -24,6 +24,7 @@ type IProps = Partial<
     | 'flexShrink'
     | 'flexWrap'
     | 'gap'
+    | 'height'
     | 'justifyContent'
     | 'margin'
     | 'marginBottom'
@@ -45,6 +46,7 @@ type IProps = Partial<
     | 'paddingVertical'
     | 'rowGap'
     | 'backgroundColor'
+    | 'width'
   > & { debug?: boolean }
 >;
 
