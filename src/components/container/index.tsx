@@ -1,5 +1,7 @@
 import React, { PropsWithChildren } from 'react';
 import { View, ViewStyle } from 'react-native';
+import Color from '../../themes/colors';
+import ScaledSize from '../../themes/sizes';
 
 type IProps = Partial<
   Pick<
@@ -42,11 +44,19 @@ type IProps = Partial<
     | 'paddingTop'
     | 'paddingVertical'
     | 'rowGap'
-  >
+    | 'backgroundColor'
+  > & { debug?: boolean }
 >;
 
-const Container: React.FC<PropsWithChildren<IProps>> = ({ children, ...props }) => {
-  return <View style={{ ...props }}>{children}</View>;
+const Container: React.FC<PropsWithChildren<IProps>> = ({
+  children,
+  debug = false,
+  ...props
+}) => {
+  const debugStyle = debug
+    ? { borderWidth: ScaledSize.XS_1, borderColor: Color.BLACK }
+    : {};
+  return <View style={{ ...props, ...debugStyle }}>{children}</View>;
 };
 
 export default Container;
