@@ -15,6 +15,8 @@
 		7699B88040F8A987B510C191 /* libPods-WhatsAppClone-WhatsAppCloneTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-WhatsAppClone-WhatsAppCloneTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		8DCA86F0926EB8C52215A0AF /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		DA36C1D4179C455B98074588 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1604C2E018F34A188B1F50B2 /* Montserrat-Medium.ttf */; };
+		2E1CA5043F5B4A7BAE22C424 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92392983A97B4E8B85EDA673 /* Montserrat-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = WhatsAppClone/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-WhatsAppClone-WhatsAppCloneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsAppClone-WhatsAppCloneTests.release.xcconfig"; path = "Target Support Files/Pods-WhatsAppClone-WhatsAppCloneTests/Pods-WhatsAppClone-WhatsAppCloneTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		1604C2E018F34A188B1F50B2 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; name = "Montserrat-Medium.ttf"; path = "../src/assets/fonts/Montserrat-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		92392983A97B4E8B85EDA673 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; name = "Montserrat-Regular.ttf"; path = "../src/assets/fonts/Montserrat-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				6BB4208F418C4EF9A377F11C /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -150,6 +155,16 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		6BB4208F418C4EF9A377F11C /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				1604C2E018F34A188B1F50B2 /* Montserrat-Medium.ttf */,
+				92392983A97B4E8B85EDA673 /* Montserrat-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -247,6 +262,8 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				8DCA86F0926EB8C52215A0AF /* PrivacyInfo.xcprivacy in Resources */,
+				DA36C1D4179C455B98074588 /* Montserrat-Medium.ttf in Resources */,
+				2E1CA5043F5B4A7BAE22C424 /* Montserrat-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
