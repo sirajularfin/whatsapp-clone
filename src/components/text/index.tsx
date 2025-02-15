@@ -3,7 +3,7 @@ import { Text as NativeText, TextStyle } from 'react-native';
 import { FontVariant, styles } from './styles';
 
 type IProps = Partial<
-  Pick<TextStyle, 'textAlign'> & {
+  Pick<TextStyle, 'textAlign' | 'color'> & {
     numberOfLines: number;
     useLetterSpacing: boolean;
     useLineHeight: boolean;
@@ -12,18 +12,15 @@ type IProps = Partial<
 >;
 
 const Text: React.FC<PropsWithChildren<IProps>> = ({
-  children,
   useLetterSpacing = true,
   useLineHeight = true,
+  children,
   ...props
 }) => {
   const classes = styles(useLineHeight, useLetterSpacing);
   return (
     <NativeText
-      style={[
-        { textAlign: props.textAlign },
-        classes[props.variant as keyof typeof classes],
-      ]}
+      style={[classes[props.variant as keyof typeof classes], { ...props }]}
       numberOfLines={props.numberOfLines}
     >
       {children}
