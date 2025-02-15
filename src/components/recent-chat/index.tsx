@@ -41,10 +41,18 @@ const RecentChat: React.FC<IProps> = ({ ...props }) => {
           flexDirection="row"
           justifyContent="space-between"
         >
-          <Text variant={FontVariant.HeadingSmall}>{props.personName}</Text>
-          <Text variant={FontVariant.LabelSmall}>{props.lastChatDateTime}</Text>
+          <Text variant={FontVariant.HeadingSmall} color={Color.BLACK}>
+            {props.personName}
+          </Text>
+          <Text variant={FontVariant.LabelSmall} color={Color.BLACK}>
+            {props.lastChatDateTime}
+          </Text>
         </Container>
-        <Text variant={FontVariant.BodyMedium} numberOfLines={1}>
+        <Text
+          variant={FontVariant.BodyMedium}
+          color={Color.BLACK}
+          numberOfLines={1}
+        >
           {props.lastChatMessage}
         </Text>
       </Container>
