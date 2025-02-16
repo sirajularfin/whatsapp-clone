@@ -1,13 +1,13 @@
 import React from 'react';
 import { FlatList } from 'react-native';
-import RecentChat from '../../components/recent-chat';
-import Color from '../../themes/colors';
-import data from '../../mocks/chatHistory.json';
-import ScreenLayout from '../../components/screen-layout';
-import Container from '../../components/container';
-import ScaledSize from '../../themes/sizes';
-import TextInput from '../../components/text-input';
-import SearchIcon from '../../assets/icons/search.svg';
+import RecentChat from 'src/components/recent-chat';
+import Color from 'src/themes/colors';
+import data from 'src/mocks/chatHistory.json';
+import ScreenLayout from 'src/components/screen-layout';
+import Container from 'src/components/container';
+import ScaledSize from 'src/themes/sizes';
+import TextInput from 'src/components/text-input';
+import SearchIcon from 'src/assets/icons/search.svg';
 
 const flatListSeparator = () => <Container height={ScaledSize.XS_5} />;
 
