@@ -1,3 +1,4 @@
-export enum ROUTES {
-  CHAT_SCREEN = 'CHAT_SCREEN',
+export enum Routes {
+  HomeScreen = 'HOME_SCREEN',
+  ConversationScreen = 'CONVERSATION_SCREEN',
 }
