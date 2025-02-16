@@ -23,7 +23,6 @@ const RecentChat: React.FC<IProps> = ({ ...props }) => {
       borderRadius={ScaledSize.XS_10}
       flexDirection="row"
       columnGap={ScaledSize.XS_10}
-      marginHorizontal={ScaledSize.XS_10}
       padding={ScaledSize.XS_10}
     >
       <Image
