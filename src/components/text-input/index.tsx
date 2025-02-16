@@ -15,10 +15,10 @@ type IProps = Partial<
 
 const TextInput: React.FC<IProps> = ({ ...props }) => {
   return (
-    <View>
+    <View style={styles.container}>
       {props.icon}
       <NativeTextInput
-        style={{ ...styles.container, ...styles.text }}
+        style={{ ...styles.textInput, ...styles.text }}
         placeholder={props.placeholder}
         placeholderTextColor={Color.GREY_800}
         value={props.value}

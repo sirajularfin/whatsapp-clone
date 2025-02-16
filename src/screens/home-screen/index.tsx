@@ -8,16 +8,27 @@ import { FontVariant } from '../../components/text/styles';
 import ScreenLayout from '../../components/screen-layout';
 import Container from '../../components/container';
 import ScaledSize from '../../themes/sizes';
+import TextInput from '../../components/text-input';
+import SearchIcon from '../../assets/icons/search.svg';
 
 const flatListSeparator = () => <Container height={ScaledSize.XS_5} />;
 
 const HomeScreen: React.FC = () => {
   return (
     <ScreenLayout backgroundColor={Color.WHITE}>
-      <Container rowGap={ScaledSize.S_20}>
-        <Text variant={FontVariant.HeadingSmall} textAlign="center">
+      <Container rowGap={ScaledSize.S_20} paddingHorizontal={ScaledSize.XS_10}>
+        <Text
+          color={Color.BLACK}
+          textAlign="center"
+          useLineHeight={false}
+          variant={FontVariant.HeadingSmall}
+        >
           BuzzChat
         </Text>
+        <TextInput
+          placeholder="Search"
+          icon={<SearchIcon height={ScaledSize.S_15} width={ScaledSize.S_15} />}
+        />
         <FlatList
           data={data}
           renderItem={({ item }) => (
