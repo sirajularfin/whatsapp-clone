@@ -4,7 +4,7 @@ import {
   View,
   TextInput as NativeTextInput,
 } from 'react-native';
-import Color from '../../themes/colors';
+import Color from 'src/themes/colors';
 import styles from './styles';
 
 type IProps = Partial<

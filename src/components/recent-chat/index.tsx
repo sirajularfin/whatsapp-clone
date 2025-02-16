@@ -1,10 +1,10 @@
 import React from 'react';
-import Text from '../text';
-import { FontVariant } from '../text/styles';
-import ScaledSize from '../../themes/sizes';
-import Container from '../container';
-import Image from '../image';
-import Color from '../../themes/colors';
+import Text from 'src/components/text';
+import { FontVariant } from 'src/components/text/styles';
+import ScaledSize from 'src/themes/sizes';
+import Container from 'src/components/container';
+import Image from 'src/components/image';
+import Color from 'src/themes/colors';
 
 interface IProps {
   lastChatDateTime?: string;

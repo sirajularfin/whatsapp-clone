@@ -1,6 +1,11 @@
+import { Dimensions } from 'react-native';
 import { moderateScale } from '../util/dimensions';
 
+const { width, height } = Dimensions.get('window');
+
 enum ScaledSize {
+  SCREEN_WIDTH = width,
+  SCREEN_HEIGHT = height,
   ZERO = moderateScale(0),
   XS_1 = moderateScale(1),
   XS_2 = moderateScale(2),

@@ -1,7 +1,7 @@
 import React, { PropsWithChildren } from 'react';
 import { View, ViewStyle } from 'react-native';
-import Color from '../../themes/colors';
-import ScaledSize from '../../themes/sizes';
+import Color from 'src/themes/colors';
+import ScaledSize from 'src/themes/sizes';
 
 type IProps = Partial<
   Pick<

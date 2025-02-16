@@ -8,6 +8,7 @@ enum Color {
   PURPLE_A100 = '#B388FF',
   BLACK = '#212121',
   WHITE = '#FFFFFF',
+  TRANSPARENT = 'TRANSPARENT',
 }
 
 export default Color;
