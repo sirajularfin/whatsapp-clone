@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from 'react';
-import { View, ViewStyle } from 'react-native';
+import { ScrollView, View, ViewStyle } from 'react-native';
 import Color from 'src/themes/colors';
 import ScaledSize from 'src/themes/sizes';
 
@@ -71,18 +71,25 @@ type IProps = MarginProps &
   PositionProps &
   DimensionProps & {
     debug: boolean;
+    scrollable: boolean;
     backgroundColor: ViewStyle['backgroundColor'];
   };
 
 const Container: React.FC<PropsWithChildren<Partial<IProps>>> = ({
   children,
   debug = false,
+  scrollable = false,
   ...props
 }) => {
   const debugStyle = debug
     ? { borderWidth: ScaledSize.XS_1, borderColor: Color.BLACK }
     : {};
-  return <View style={{ ...props, ...debugStyle }}>{children}</View>;
+
+  return scrollable ? (
+    <ScrollView style={{ ...props, ...debugStyle }}>{children}</ScrollView>
+  ) : (
+    <View style={{ ...props, ...debugStyle }}>{children}</View>
+  );
 };
 
 export default Container;
