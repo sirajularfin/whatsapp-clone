@@ -62,7 +62,10 @@ type PositionProps = Pick<
   'bottom' | 'left' | 'position' | 'right' | 'top'
 >;
 
-type DimensionProps = Pick<ViewStyle, 'height' | 'width' | 'maxWidth'>;
+type DimensionProps = Pick<
+  ViewStyle,
+  'height' | 'width' | 'maxWidth' | 'minWidth' | 'maxHeight' | 'minHeight'
+>;
 
 type IProps = MarginProps &
   PaddingProps &
