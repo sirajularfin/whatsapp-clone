@@ -7,13 +7,13 @@ import Image from 'src/components/image';
 import Color from 'src/themes/colors';
 
 interface IProps {
-  lastChatDateTime?: string;
-  lastChatMessage?: string;
-  personName?: string;
-  profileImageUrl?: string;
+  lastChatDateTime: string;
+  lastChatMessage: string;
+  personName: string;
+  profileImageUrl: string;
 }
 
-const RecentChat: React.FC<IProps> = ({ ...props }) => {
+const RecentChat: React.FC<Partial<IProps>> = ({ ...props }) => {
   return (
     <Container
       alignItems="center"
