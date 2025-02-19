@@ -3,59 +3,78 @@ import { View, ViewStyle } from 'react-native';
 import Color from 'src/themes/colors';
 import ScaledSize from 'src/themes/sizes';
 
-type IProps = Partial<
-  Pick<
-    ViewStyle,
-    | 'alignContent'
-    | 'alignItems'
-    | 'alignSelf'
-    | 'backgroundColor'
-    | 'borderBottomWidth'
-    | 'borderColor'
-    | 'borderLeftWidth'
-    | 'borderRadius'
-    | 'borderRightWidth'
-    | 'borderTopWidth'
-    | 'borderWidth'
-    | 'bottom'
-    | 'columnGap'
-    | 'flex'
-    | 'flexBasis'
-    | 'flexDirection'
-    | 'flexGrow'
-    | 'flexShrink'
-    | 'flexWrap'
-    | 'gap'
-    | 'height'
-    | 'justifyContent'
-    | 'left'
-    | 'margin'
-    | 'marginBottom'
-    | 'marginEnd'
-    | 'marginHorizontal'
-    | 'marginLeft'
-    | 'marginRight'
-    | 'marginStart'
-    | 'marginTop'
-    | 'marginVertical'
-    | 'padding'
-    | 'paddingBottom'
-    | 'paddingEnd'
-    | 'paddingHorizontal'
-    | 'paddingLeft'
-    | 'paddingRight'
-    | 'paddingStart'
-    | 'paddingTop'
-    | 'paddingVertical'
-    | 'position'
-    | 'right'
-    | 'rowGap'
-    | 'top'
-    | 'width'
-  > & { debug?: boolean }
+type MarginProps = Pick<
+  ViewStyle,
+  | 'margin'
+  | 'marginBottom'
+  | 'marginEnd'
+  | 'marginHorizontal'
+  | 'marginLeft'
+  | 'marginRight'
+  | 'marginStart'
+  | 'marginTop'
+  | 'marginVertical'
 >;
 
-const Container: React.FC<PropsWithChildren<IProps>> = ({
+type PaddingProps = Pick<
+  ViewStyle,
+  | 'padding'
+  | 'paddingBottom'
+  | 'paddingEnd'
+  | 'paddingHorizontal'
+  | 'paddingLeft'
+  | 'paddingRight'
+  | 'paddingStart'
+  | 'paddingTop'
+  | 'paddingVertical'
+>;
+
+type BorderProps = Pick<
+  ViewStyle,
+  | 'borderBottomWidth'
+  | 'borderColor'
+  | 'borderLeftWidth'
+  | 'borderRadius'
+  | 'borderRightWidth'
+  | 'borderTopWidth'
+  | 'borderWidth'
+>;
+
+type FlexProps = Pick<
+  ViewStyle,
+  | 'alignContent'
+  | 'alignItems'
+  | 'alignSelf'
+  | 'columnGap'
+  | 'flex'
+  | 'flexBasis'
+  | 'flexDirection'
+  | 'flexGrow'
+  | 'flexShrink'
+  | 'flexWrap'
+  | 'gap'
+  | 'justifyContent'
+  | 'rowGap'
+>;
+
+type PositionProps = Pick<
+  ViewStyle,
+  'bottom' | 'left' | 'position' | 'right' | 'top'
+>;
+
+type DimensionProps = Pick<ViewStyle, 'height' | 'width' | 'maxWidth'>;
+
+type IProps = MarginProps &
+  PaddingProps &
+  BorderProps &
+  FlexProps &
+  PositionProps &
+  DimensionProps & {
+    debug: boolean;
+    backgroundColor: ViewStyle['backgroundColor'];
+  };
+
+const Container: React.FC<PropsWithChildren<Partial<IProps>>> = ({
   children,
   debug = false,
   ...props
