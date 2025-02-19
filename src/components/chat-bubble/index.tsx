@@ -17,6 +17,7 @@ const ChatBubble: React.FC<Partial<IProps>> = ({ ...props }) => {
       borderRadius={ScaledSize.XS_10}
       padding={ScaledSize.XS_10}
       alignSelf="flex-start"
+      maxWidth="80%"
     >
       <Text variant={FontVariant.BodyMedium} color={Color.BLACK}>
         {props.text}
