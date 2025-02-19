@@ -10,11 +10,8 @@ const styles = StyleSheet.create({
     borderRadius: ScaledSize.XS_10,
     columnGap: ScaledSize.S_15,
     flexDirection: 'row',
-    paddingHorizontal: ScaledSize.S_11,
-  },
-  textInput: {
-    backgroundColor: Color.GREY_100,
     paddingVertical: ScaledSize.S_12,
+    paddingHorizontal: ScaledSize.S_11,
   },
   text: {
     fontSize: ScaledSize.S_14,
