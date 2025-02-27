@@ -1,5 +1,5 @@
 import { Dimensions } from 'react-native';
-import { moderateScale } from '../util/dimensions';
+import { moderateScale } from '../util/dimensions.util';
 
 const { width, height } = Dimensions.get('window');
 

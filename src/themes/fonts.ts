@@ -1,4 +1,4 @@
-import { isIOS } from '../util/commons';
+import { isIOS } from '../util/commons.util';
 
 export const Font = {
   Montserrat: {
