@@ -9,11 +9,11 @@ import ScaledSize from 'src/themes/sizes';
 import styles from './styles';
 
 const ConversationScreen: React.FC = () => {
-  const { top, bottom } = useSafeAreaInsets();
+  const { bottom } = useSafeAreaInsets();
 
   return (
-    <ScreenLayout enableFullScreenMode enableBackgroundImage>
-      <Container top={top} scrollable paddingHorizontal={ScaledSize.XS_10}>
+    <ScreenLayout enableBackgroundImage hideStatusBar>
+      <Container scrollable paddingVertical={ScaledSize.XS_10}>
         <DateTimeLabel dateTime={Date.now().toString()} />
         <ChatBubble
           text="Placerat ullamcorper porttitor tempor enim libero. Sem dolor gravida lacinia velit porttitor odio elit."
