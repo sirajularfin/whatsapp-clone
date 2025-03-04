@@ -1,4 +1,4 @@
 export enum Routes {
-  HomeScreen = 'HOME_SCREEN',
-  ConversationScreen = 'CONVERSATION_SCREEN',
+  HomeScreen = 'HomeScreen',
+  ConversationScreen = 'ConversationScreen',
 }

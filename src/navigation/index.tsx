@@ -1,23 +1,26 @@
 import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
 import { Routes } from './routes';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import ConversationScreen from 'src/screens/conversation-screen';
-import HomeScreen from 'src/screens/home-screen';
-
-const Stack = createNativeStackNavigator();
+import ConversationScreen from 'src/screens/conversation';
+import HomeScreen from 'src/screens/home';
+import useNavigationOptions from './navigation.hook';
+import { navigationRef, Stack } from './types';
 
 const Navigation = () => {
+  const { basicNavigationOptions, firstScreenOptions } = useNavigationOptions();
+
   return (
-    <NavigationContainer>
-      <Stack.Navigator
-        initialRouteName={Routes.ConversationScreen}
-        screenOptions={{ headerShown: false }}
-      >
-        <Stack.Screen name={Routes.HomeScreen} component={HomeScreen} />
+    <NavigationContainer ref={navigationRef}>
+      <Stack.Navigator initialRouteName={Routes.HomeScreen}>
+        <Stack.Screen
+          name={Routes.HomeScreen}
+          component={HomeScreen}
+          options={firstScreenOptions}
+        />
         <Stack.Screen
           name={Routes.ConversationScreen}
           component={ConversationScreen}
+          options={basicNavigationOptions}
         />
       </Stack.Navigator>
     </NavigationContainer>
