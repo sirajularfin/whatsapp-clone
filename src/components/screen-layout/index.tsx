@@ -11,7 +11,6 @@ import Text from 'src/components/text';
 import { FontVariant } from 'src/components/text/styles';
 import Container from 'src/components/container';
 import ScaledSize from 'src/themes/sizes';
-import ArrowBackwardIcon from 'src/assets/icons/arrow-backward.svg';
 
 interface IProps {
   backgroundColor: Color;
@@ -19,29 +18,29 @@ interface IProps {
   enableFullScreenMode: boolean;
   enableBackgroundImage: boolean;
   enableKeyboardAvoidingView: boolean;
-  enableStatusBar: boolean;
-  enableNavigationBar: boolean;
+  hideStatusBar: boolean;
 }
 
 const bgImage = require('src/assets/images/chat-background/image.png');
 
 const ScreenLayout: React.FC<PropsWithChildren<Partial<IProps>>> = ({
   children,
-  enableStatusBar = false,
+  hideStatusBar = false,
   enableBackgroundImage = false,
   enableFullScreenMode = false,
   enableKeyboardAvoidingView = false,
-  enableNavigationBar = false,
   ...props
 }) => {
   const { bottom, top } = useSafeAreaInsets();
   return (
     <>
-      <StatusBar
-        translucent
-        backgroundColor={Color.TRANSPARENT}
-        hidden={enableStatusBar}
-      />
+      {hideStatusBar && (
+        <StatusBar
+          translucent
+          backgroundColor={Color.TRANSPARENT}
+          hidden={hideStatusBar}
+        />
+      )}
       <KeyboardAvoidingView
         behavior="padding"
         enabled={enableKeyboardAvoidingView}
@@ -62,14 +61,6 @@ const ScreenLayout: React.FC<PropsWithChildren<Partial<IProps>>> = ({
               backgroundColor: Color.WHITE,
             }}
           />
-        )}
-        {enableNavigationBar && (
-          <Container backgroundColor={Color.WHITE} padding={ScaledSize.S_20}>
-            <ArrowBackwardIcon
-              height={ScaledSize.S_17}
-              width={ScaledSize.XS_10}
-            />
-          </Container>
         )}
         {props.headerTitle && (
           <Container marginBottom={ScaledSize.S_20}>

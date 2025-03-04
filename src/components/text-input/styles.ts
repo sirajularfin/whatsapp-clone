@@ -17,7 +17,6 @@ const styles = StyleSheet.create({
     fontSize: ScaledSize.S_14,
     fontFamily: Font.Montserrat.medium,
     letterSpacing: 0.1,
-    lineHeight: ScaledSize.S_20,
   },
 });
 
