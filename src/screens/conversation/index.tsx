@@ -12,8 +12,8 @@ const ConversationScreen: React.FC = () => {
   const { bottom } = useSafeAreaInsets();
 
   return (
-    <ScreenLayout enableBackgroundImage hideStatusBar>
-      <Container scrollable paddingVertical={ScaledSize.XS_10}>
+    <ScreenLayout enableBackgroundImage enableFullScreenMode hideStatusBar>
+      <Container scrollable paddingVertical={ScaledSize.S_20}>
         <DateTimeLabel dateTime={Date.now().toString()} />
         <ChatBubble
           text="Placerat ullamcorper porttitor tempor enim libero. Sem dolor gravida lacinia velit porttitor odio elit."
